@@ -12,6 +12,12 @@ A lightweight ATS-style project that stores resumes and job postings, extracts s
 - Tracks applications and status in `applications`
 - Prevents duplicate applications with a unique index on `(resume_id, job_id)`
 
+  ### Application Lifecycle Tracking
+- Tracks application status changes over time using a status history table
+- Supports multiple interviews per application
+- Derives current status using latest-event SQL queries
+- Enables analytics such as match score vs outcome and time-to-offer
+
 ## Tech
 - SQLite
 - DB Browser for SQLite
